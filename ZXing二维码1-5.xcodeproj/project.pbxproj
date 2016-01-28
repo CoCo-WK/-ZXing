@@ -13,9 +13,12 @@
 		C7EA96AE1C3B587A00502CC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA96AC1C3B587A00502CC4 /* Main.storyboard */; };
 		C7EA96B01C3B587A00502CC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7EA96AF1C3B587A00502CC4 /* Assets.xcassets */; };
 		C7EA96B31C3B587A00502CC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7EA96B11C3B587A00502CC4 /* LaunchScreen.storyboard */; };
+		C965B95F9AF06451644D0FBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856151FD9A16D98A580DB6C3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CDE224BA9EEFD80EA37539A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		856151FD9A16D98A580DB6C3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA96A01C3B587A00502CC4 /* ZXing二维码1-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZXing二维码1-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7EA96A41C3B587A00502CC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7EA96A61C3B587A00502CC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		C7EA96AF1C3B587A00502CC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7EA96B21C3B587A00502CC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7EA96B41C3B587A00502CC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD17D650FE4618D0A409E40F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C965B95F9AF06451644D0FBA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B1E509479EB31869CF250B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CDE224BA9EEFD80EA37539A /* Pods.debug.xcconfig */,
+				DD17D650FE4618D0A409E40F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2106C91C0C80186B2F6CE46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				856151FD9A16D98A580DB6C3 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7EA96971C3B587A00502CC4 = {
 			isa = PBXGroup;
 			children = (
 				C7EA96A21C3B587A00502CC4 /* ZXing二维码1-5 */,
 				C7EA96A11C3B587A00502CC4 /* Products */,
+				7B1E509479EB31869CF250B1 /* Pods */,
+				B2106C91C0C80186B2F6CE46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7EA96B71C3B587A00502CC4 /* Build configuration list for PBXNativeTarget "ZXing二维码1-5" */;
 			buildPhases = (
+				8DB60A64E2F1C2FB95CB913E /* Check Pods Manifest.lock */,
 				C7EA969C1C3B587A00502CC4 /* Sources */,
 				C7EA969D1C3B587A00502CC4 /* Frameworks */,
 				C7EA969E1C3B587A00502CC4 /* Resources */,
+				CC44A24662549233B4691666 /* Embed Pods Frameworks */,
+				395D5384E927318EE3931566 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		395D5384E927318EE3931566 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DB60A64E2F1C2FB95CB913E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC44A24662549233B4691666 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C7EA969C1C3B587A00502CC4 /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		C7EA96B81C3B587A00502CC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CDE224BA9EEFD80EA37539A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ZXing二维码1-5/Info.plist";
@@ -272,6 +348,7 @@
 		};
 		C7EA96B91C3B587A00502CC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD17D650FE4618D0A409E40F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ZXing二维码1-5/Info.plist";
@@ -300,6 +377,7 @@
 				C7EA96B91C3B587A00502CC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
